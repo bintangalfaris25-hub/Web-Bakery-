@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRAFTDOUGH - Pastry & Coffee</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="bakery.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">STAR<span></span>LUNE</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Our Menu</a>
+            <a href="#about">About</a>
+            <a href="#order">Order</a>
+        </nav>
+
+        <button class="cart-btn" onclick="goToOrder()">
+            Trolly (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <h4>FRESH FROM OVEN, MADE WITH LOVE</h4>
+
+            <h1>
+                Happiness is<br>
+                a <span>Cookie</span> Away.
+            </h1>
+
+            <p>
+                Temukan kebahagiaan dalam setiap gigitan.
+                Nikmati berbagai pilihan bakery dan coffee lezat dengan
+                rasa istimewa yang dibuat untuk menemani harimu.
+            </p>
+
+            <a href="#menu" class="primary-btn">
+                Explore Our Menu 
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img src="Cookie.jpg"
+                 alt="Delicious pastries">
+        </div>
+
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="section" id="menu">
+
+        <h2 class="section-title">Our Special Menu</h2>
+
+        <p class="section-desc">
+            Six Menu to Make Your Day.
+        </p>
+
+        <div class="menu-container">
+
+            <div class="menu-card">
+                <img src="Brow.png" alt="Broww">
+                <h3>Broww</h3>
+                <p>Fudgy brownies, dengan coklat yang terbang langsung dari swiss.</p>
+                <div class="menu-bottom">
+                    <span class="price">Rp 23.799</span>
+                    <button class="add-btn" onclick="addToCart(0)">+ Add to Trolly</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="Cookies.JPEG" alt="Crumb Attack">
+                <h3>Crumb Attack</h3>
+                <p>OG Soft Cookies, dengan coklat yang ga mungkin tipis.</p>
+                <div class="menu-bottom">
+                    <span class="price">Rp 21.999</span>
+                    <button class="add-btn" onclick="addToCart(1)">+ Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="cheese.jpg" alt="Say Cheese">
+                <h3>say cheese</h3>
+                <p>Burnt Cheesecake dengan tekstur lembut dan creamy, cocok buat nenangin hati.</p>
+                <div class="menu-bottom">
+                    <span class="price">Rp 29.899</span>
+                    <button class="add-btn" onclick="addToCart(2)">+ Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="kopi1.jpg" alt="Latte">
+                <h3>Coffee Latte</h3>
+                <p>Pahitnya kopi, manisnya susu, cocok buat kamu yang hidupnya butuh sedikit keseimbangan.</p>
+                <div class="menu-bottom">
+                    <span class="price">Rp 21.980</span>
+                    <button class="add-btn" onclick="addToCart(3)">+ Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="kopi2.jpg" alt="Tiramisu">
+                <h3>Signature BerryCano</h3>
+                <p>Bukan gunung berapi, tapi ledakan kesegaran berry yang siap bikin harimu lebih happy!</p>
+                <div class="menu-bottom">
+                    <span class="price">Rp 27.799</span>
+                    <button class="add-btn" onclick="addToCart(4)">+ Add to Order</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="kopi3.jpg" alt="Blueberry">
+                <h3>Americano</h3>
+                <p>Mau kemana pun kamu lari, pasti baliknya ke americano lagi.</p>
+                <div class="menu-bottom">
+                    <span class="price">Rp 22.999</span>
+                    <button class="add-btn" onclick="addToCart(5)">+ Add to Order</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <ABOUT SECTION >
+    <section class="about" id="about">
+
+        <h2>About STARLUNE</h2>
+
+        <p>
+            STARLUNE Bakery & Coffee menghadirkan pengalaman menikmati
+            signature menu dengan cita rasa istimewa.
+            Setiap produk dirancang untuk memberikan pengalaman
+            yang menyenangkan dalam setiap momen.
+            Enjoy your day with STARLUNE!
+        </p>
+
+    </section>
+
+    <!-- ORDER SECTION -->
+    <section class="order-section" id="order">
+
+        <div class="order-box">
+
+            <h2>🛒 Your Order</h2>
+
+            <div id="order-list">
+                <div class="empty">
+                    Belum ada produk yang dipilih.
+                </div>
+            </div>
+
+            <div class="total">
+                <span>Total</span>
+                <span id="total-price">Rp 0</span>
+            </div>
+
+            <button class="checkout-btn" onclick="checkout()">
+                Order Now →
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>STARLUNE Bakery & Coffee</h2>
+        <p>Fresh Donuts, Fresh Happiness.</p>
+        <p>© 2026 STARLUNE Website Project | Created by Bintang Al Faris</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
